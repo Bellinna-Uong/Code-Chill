@@ -23,21 +23,25 @@
   --card-bg: #3d2817;
   --shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   --font-primary: 'UnifrakturMaguntia', cursive;
-  --font-secondary: 'Kurale', serif;
+  --font-secondary: 'UnifrakturMaguntia', cursive;
+  --volume-color: #8b4513;
+  --volume-track: #C4946C;
 }
 
 /* PotionLab */
 .theme-potionlab {
-  --bg-primary: #584E6A;
+  --bg-primary: #9892a3;
   --bg-secondary: #5E5065;
   --text-primary: #C376CC;
-  --text-secondary: #684127;
+  --text-secondary: #27A8BE;
   --accent-color: #8b4513;
   --border-color: #654321;
   --card-bg: #3d2817;
   --shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  --font-primary: 'Tangerine', cursive;
-  --font-secondary: 'Patrick Hand', cursive;
+  --font-primary: 'Kurale', serif;
+  --font-secondary: 'Kurale', serif;
+  --volume-color: #C376CC;
+  --volume-track: #5E5065;
 }
 
 /* Train */
@@ -50,8 +54,10 @@
   --border-color: #654321;
   --card-bg: #3d2817;
   --shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  --font-primary: 'Kurale', serif;
-  --font-secondary: 'Patrick Hand', cursive;
+  --font-primary: 'Tangerine', cursive;
+  --font-secondary: 'Tangerine', cursive;
+  --volume-color: #AC774D;
+  --volume-track: #6F4E30;
 }
 
 body {
@@ -118,7 +124,7 @@ body {
 
 h1 {
   color: var(--text-primary);
-  font-size: 2.5rem;
+  font-size: 3rem;
   position: absolute;
   top: 0px;
   font-family: var(--font-primary);
@@ -126,9 +132,9 @@ h1 {
 
 h2 {
   color: var(--text-secondary);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   position: absolute;
   font-family: var(--font-secondary);
 }
@@ -168,7 +174,6 @@ button {
 
 .theme-selector label {
   color: var(--text-secondary);
-  font-size: 14px;
   margin-right: 10px;
 }
 
@@ -177,8 +182,7 @@ button {
 }
 
 .sound-toggle {
-  margin: 1rem;
-  padding: 1rem;
+  margin: 0.5rem;
   background: transparent;
   display: inline-block;
   min-width: 250px;
@@ -186,15 +190,12 @@ button {
 
 .sound-button {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
   margin-bottom: 10px;
   width: 100%;
   max-width: 200px;
-  padding: 12px 20px;
   border-radius: 8px;
   transition: all 0.3s ease;
+  margin:0;
 }
 
 .sound-button:hover {
@@ -205,8 +206,6 @@ button {
 .play-pause-icon {
   width: 24px;
   height: 24px;
-  filter: invert(1);
-  opacity: 0.8;
   transition: all 0.3s ease;
 }
 
@@ -217,7 +216,7 @@ button {
 
 .sound-label {
   font-family: var(--font-secondary);
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--text-primary);
 }
 
@@ -225,4 +224,41 @@ button {
   width: 100%;
   max-width: 200px;
   color: var(--text-primary);
+  background: var(--volume-track);
+  border-radius: 5px;
+  outline: none;
+  height: 6px;
+}
+
+/* Styles pour le slider de volume selon le thème */
+.sound-toggle input[type="range"]::-webkit-slider-thumb {
+  background: var(--volume-color);
+  border-radius: 50%;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.sound-toggle input[type="range"]::-moz-range-thumb {
+  background: var(--volume-color);
+  border-radius: 50%;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.sound-toggle input[type="range"]::-webkit-slider-track {
+  background: var(--volume-track);
+  border-radius: 5px;
+  height: 6px;
+}
+
+.sound-toggle input[type="range"]::-moz-range-track {
+  background: var(--volume-track);
+  border-radius: 5px;
+  height: 6px;
 } 
