@@ -15,7 +15,7 @@ function App() {
 
   // Fonction pour obtenir l'image du portal selon le thème
   const getPortalImage = () => {
-    return `/assets/ui/portal-${currentTheme}.png`;
+    return `/assets/ui/image-${currentTheme}.png`;
   };
 
   return (

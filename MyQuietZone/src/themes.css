@@ -2,7 +2,7 @@
 
 :root {
   /* Default (tavern) */
-  --bg-primary: #E3D1BC;
+  --bg-primary: #d39d6b;
   --bg-secondary: #C4946C;
   --text-primary: #23120E;
   --text-secondary: #684127;
@@ -14,7 +14,7 @@
 
 /* Tavern */
 .theme-tavern {
-  --bg-primary: #E3D1BC;
+  --bg-primary: #d39d6b;
   --bg-secondary: #C4946C;
   --text-primary: #23120E;
   --text-secondary: #684127;
@@ -46,10 +46,10 @@
 
 /* Train */
 .theme-train {
-  --bg-primary: #D2C6A1;
+  --bg-primary: #ABBEF8;
   --bg-secondary: #6F4E30;
-  --text-primary: #AC774D;
-  --text-secondary: #684127;
+  --text-primary: #704826;
+  --text-secondary: #387145;
   --accent-color: #8b4513;
   --border-color: #654321;
   --card-bg: #3d2817;
